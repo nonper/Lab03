@@ -1,19 +1,19 @@
 <template>
-  <h1>Name List</h1>
+  <h1>Studen Information</h1>
   <div class="events">
-    <EventCardCat v-for="event in events" :key="event.id" :event="event" />
+    <EventCardStu v-for="event in events" :key="event.id" :event="event" />
   </div>
 </template>
 
 <script>
 // @ is an alias to /src
-import EventCardCat from '@/components/EventCardCat.vue'
-import EventService from '@/services/EventService'
+import EventCardStu from '@/components/StudenInfo.vue'
+import EventService from '@/services/AnotherEventService'
 
 export default {
   name: 'EventListView',
   components: {
-    EventCardCat //register it as a child component
+    EventCardStu //register it as a child component
   },
   data() {
     return {
